@@ -1,0 +1,1 @@
+const words = ["Donald made a list of things he wanted to do before he died.", "I'm just trying to stop you from making a big mistake.", "She dreamed of one day having the flexibility to take a day off whenever she felt sick."];

@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <title> Typing Speed Test Game </title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- <div class="container animate__animated animate__slideInUp"> -->
+    <div class="container">
+        <div class="title">
+            <h1> Typing Speed Test Game</h1>
+        </div>
+
+        <div class="intro" id="intro">
+            <p> Press any key to start </p>
+        </div>
+
+        <input type="text" class="input-field" id="input-field" />
+        <div class="sub-container">
+            <div class="typing-text">
+                <p></p>
+            </div>
+            <div class="content">
+                <ul class="result">
+                    <li class="time">
+                        <p> Time Left : </p>
+                        <span><b> 60</b>s</span>
+                    </li>
+                    <li class="mistakes">
+                        <p> Mistakes : </p>
+                        <span>0</span>
+                    </li>
+                    <li class="wpm">
+                        <p> WPM : </p>
+                        <span>0</span>
+                    </li>
+                </ul>
+                <button> Try Again </button>
+            </div>
+        </div>
+
+        <div class="sub-container" id="name-modal" style="margin-top: 20px; text-align: center;">
+            <h1 class="name-title"> Enter Your Name </h1>
+            <input class="name" id="username"/>
+            <button class="name-button" id="name-button"> > </button>
+        </div>
+
+
+        <div class="sub-container" id="leaderboard-modal" style="margin-top: 20px;">
+            <div class="leaderboard-title">
+                <h1> Leaderboard </h1>
+            </div>
+            <table id="table">
+                <tr>
+                    <th> NAME </th>
+                    <th> WPM </th>
+                </tr>
+            </table>
+
+            <!-- INSERT HERE -->
+        </div>
+    </div>
+</body>
+\
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="js/words.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>
