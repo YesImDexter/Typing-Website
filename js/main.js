@@ -28,7 +28,7 @@ $(document).ready(function () {
     //     { name: "Nur", wpm: "25" }
     // ];
 
-    // // Arraydata.push(...newData);
+    // // //Arraydata.push(...newData);
     // localStorage['localstore'] = JSON.stringify(Arraydata);
     // var Arraydata = JSON.parse(localStorage['localstore']);
     // UpdateTable(Arraydata);
