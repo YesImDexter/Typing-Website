@@ -2,36 +2,36 @@
 $(document).ready(function () {
 
     //FOR ADDING  DATA TO THE TABLE
-    const leaderboardlist = document.querySelector(".sub-container table");
-    const table = document.getElementById("table")
+    // const leaderboardlist = document.querySelector(".sub-container table");
+    // const table = document.getElementById("table")
 
 
-    function UpdateTable(Datahere) {
-        let rowCount = table.rows.length;
-        console.log("Row Count : " + rowCount);
-        if (rowCount > 0) {
-            for (let i = rowCount - 1; i > 0; i--) {
-                table.deleteRow(i);
-            }
-        }
+    // function UpdateTable(Datahere) {
+    //     let rowCount = table.rows.length;
+    //     console.log("Row Count : " + rowCount);
+    //     if (rowCount > 0) {
+    //         for (let i = rowCount - 1; i > 0; i--) {
+    //             table.deleteRow(i);
+    //         }
+    //     }
 
-        Datahere.forEach(entry => {
-            let printList = '<tr>' + '<td>' + entry.name + '</td>' + '<td>' + entry.wpm + '</td>' + '</tr>';
-            leaderboardlist.innerHTML += printList;
-        });
-        console.log(Datahere);
-    }
+    //     Datahere.forEach(entry => {
+    //         let printList = '<tr>' + '<td>' + entry.name + '</td>' + '<td>' + entry.wpm + '</td>' + '</tr>';
+    //         leaderboardlist.innerHTML += printList;
+    //     });
+    //     console.log(Datahere);
+    // }
 
-    var Arraydata = [
-        { name: "Ali", wpm: "24" },
-        { name: "Amirah", wpm: "30" },
-        { name: "Nur", wpm: "25" }
-    ];
+    // var Arraydata = [
+    //     { name: "Ali", wpm: "24" },
+    //     { name: "Amirah", wpm: "30" },
+    //     { name: "Nur", wpm: "25" }
+    // ];
 
-    // Arraydata.push(...newData);
-    localStorage['localstore'] = JSON.stringify(Arraydata);
-    var Arraydata = JSON.parse(localStorage['localstore']);
-    UpdateTable(Arraydata);
+    // // Arraydata.push(...newData);
+    // localStorage['localstore'] = JSON.stringify(Arraydata);
+    // var Arraydata = JSON.parse(localStorage['localstore']);
+    // UpdateTable(Arraydata);
 
     // Select elements from the HTML document
     const typingText = document.querySelector(".typing-text p");
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     // Initialize variables
     let timer,
-        maxTime = timeLeft = 1,
+        maxTime = timeLeft = 60,
         arrayIndex = mistakes = isTyping = indexCounter = wpm = 0; // Declare arrayIndex outside of functions to make it accessible globally.
 
     // Function to generate a random sentence and display it with spans
@@ -189,30 +189,30 @@ $(document).ready(function () {
         inputField.disabled = false;
     }
 
-    const namebutton = document.getElementById("name-button");
+    // const namebutton = document.getElementById("name-button");
 
-    namebutton.addEventListener("click", (event) => {
-        event.preventDefault();
-        console.log("Button Pressed")
-        if (wpm > 0) {
-            var Arraydata = JSON.parse(localStorage['localstore']);
+    // namebutton.addEventListener("click", (event) => {
+    //     event.preventDefault();
+    //     console.log("Button Pressed")
+    //     if (wpm > 0) {
+    //         var Arraydata = JSON.parse(localStorage['localstore']);
 
-            let username = document.getElementById("username").value;
-            var newData = [
-                { name: username, wpm: wpm }
-            ];
+    //         let username = document.getElementById("username").value;
+    //         var newData = [
+    //             { name: username, wpm: wpm }
+    //         ];
 
-            console.log(newData);
+    //         console.log(newData);
 
-            Arraydata.push(...newData);
-            localStorage['localstore'] = JSON.stringify(Arraydata);
-            var Arraydata = JSON.parse(localStorage['localstore']);
-            UpdateTable(Arraydata);
-        } else {
-            alert("Please Play The Typing Test First Before Submitting Marks");
-        }
+    //         Arraydata.push(...newData);
+    //         localStorage['localstore'] = JSON.stringify(Arraydata);
+    //         var Arraydata = JSON.parse(localStorage['localstore']);
+    //         UpdateTable(Arraydata);
+    //     } else {
+    //         alert("Please Play The Typing Test First Before Submitting Marks");
+    //     }
 
-    });
+    // });
 
     // Start the game by generating a random sentence
     randomSentence();
